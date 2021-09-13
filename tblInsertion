@@ -1,5 +1,58 @@
-INSERT INTO `assessment_t`(`AssessmentID`, `AssessmentName`, `TotalMarks`, `SectionID`, `COID`, `QuestionNUmber`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
+INSERT INTO `assessment_t` (`AssessmentID`, `AssessmentName`, `TotalMarks`, `SectionID`, `COID`, `QuestionNUmber`) VALUES
+(1, 'Quiz', '15', 'CSE303_1', 1, '2'),
+(2, 'MidTerm', '30', 'CSE303_1', 2, '3'),
+(3, 'Project', '15', 'CSE303_1', 1, '4'),
+(4, 'Final', '40', 'CSE303_1', 2, '5'),
+(5, 'Quiz', '15', 'CSE303_2', 1, '2'),
+(6, 'MidTerm', '30', 'CSE303_2', 2, '3'),
+(7, 'Project', '15', 'CSE303_2', 1, '4'),
+(8, 'Final', '40', 'CSE303_2', 2, '5'),
+(9, 'Quiz', '15', 'CSE501_1', 3, '1'),
+(10, 'MidTerm', '30', 'CSE501_1', 3, '2'),
+(11, 'Project', '15', 'CSE501_1', 4, '3'),
+(12, 'Final', '40', 'CSE501_1', 4, '4');
+
+
 INSERT INTO `course_t`(`CourseID`, `CourseTitle`, `NumberOfCredit`, `ProgramID`, `MappedCourseID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
+INSERT INTO `course_t` (`CourseID`, `CourseTitle`, `NumberOfCredit`, `ProgramID`, `MappedCourseID`) VALUES
+('ACN101', 'Introduction to acco', '3', 'BBA-ACN', ''),
+('ACN301', 'Intermediate Account', '3', 'BBA-ACN', ''),
+('ACN513', 'Advance accounting', '3', 'MBA-ACN', ''),
+('ACN520', 'Income tax accountin', '3', 'MBA-ACN', ''),
+('CSE203', 'Data Structure', '3', 'B.Sc-CSE', ''),
+('CSE303', 'Database management', '3', 'B.Sc-CSE', ''),
+('CSE501', 'Theory of Programmin', '3', 'M.Sc-CSE', ''),
+('CSE503', 'Design and Analysis ', '3', 'M.Sc-CSE', ''),
+('EEE131', 'Electrical Circuit', '4', 'B.Sc-EEE', ''),
+('EEE231', 'Signals and Systems', '4', 'B.Sc-EEE', ''),
+('EEE501', 'Stochastic Processes', '3', 'M.Sc-EEE', ''),
+('EEE502', 'Advanced Digital Com', '3', 'M.Sc-EEE', ''),
+('HSC530', 'Human Health and Dis', '3', 'MPH', ''),
+('HSC531', 'Epidemiology', '3', 'MPH', ''),
+('MIS341', 'Computers in Busines', '3', 'BBA-MIS', ''),
+('MIS442', 'Management Informati', '3', 'BBA-MIS', ''),
+('PHA101', 'Introduction of Phar', '3', 'BPharm', ''),
+('PHA203', 'Complementary and Al', '3', 'BPharm', '');
+
 INSERT INTO `co_t`(`COID`, `CourseID`, `CONumber`, `CODescription`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
+INSERT INTO `co_t` (`COID`, `CourseID`, `CONumber`, `CODescription`) VALUES
+(1, 'CSE303', 'CO1', 'Apply'),
+(2, 'CSE303', 'CO2', 'Describe\r\n'),
+(3, 'CSE501', 'CO3', 'Explain'),
+(4, 'CSE501', 'CO4', 'Solve'),
+(5, 'CSE503', 'CO5', 'Analys'),
+(6, 'EEE131', 'CO2', 'Describe'),
+(7, 'EEE131', 'CO3', 'Explain');
+
+
 INSERT INTO `department_t`(`DepartmentID`, `DepartmentName`, `SchoolID`) VALUES ('[value-1]','[value-2]','[value-3]')
+
 INSERT INTO `evaluation_t`(`EvaluationID`, `AssessmentID`, `ObtainMarks`, `StudentID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
+INSERT INTO `instructor_t`(`InstructorID`, `InstructorName`, `Email`, `DepartmentID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
+INSERT INTO `mapping_t`(`COID`, `PLOID`) VALUES ('[value-1]','[value-2]')
+INSERT INTO `plo_t`(`PLOID`, `ProgramID`, `PLONumber`, `PLODomain`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
+INSERT INTO `prerequisite_t`(`CourseID`, `PrerequisiteCourseID`) VALUES ('[value-1]','[value-2]')
+INSERT INTO `program_t`(`ProgramID`, `ProgramName`, `DepartmentID`) VALUES ('[value-1]','[value-2]','[value-3]')
+INSERT INTO `registrations_t`(`StudentID`, `SectionID`, `DateOfRegistration`) VALUES ('[value-1]','[value-2]','[value-3]')
+INSERT INTO `school_t`(`SchoolID`, `SchoolName`, `UniversityID`) VALUES ('[value-1]','[value-2]','[value-3]')
+INSERT INTO `section_t`(`SectionID`, `CourseID`, `SectionNumber`, `InstructorID`, `Semester`, `Year`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
