@@ -1,0 +1,108 @@
+INSERT INTO `instructor_t` (`InstructorID`, `InstructorName`, `Email`, `DepartmentID`) VALUES
+('1545', 'Abu Sayed', '', 'CSE'),
+('4565', 'Noor Muhammad', '', 'ACN'),
+('4666', 'Sadita Ahmed', '', 'CSE'),
+('4755', 'Shahriar Kabir', '', 'ACN'),
+('4878', 'Tasnim Hassan', '', 'Pharm'),
+('5589', 'Muhammad hosain', '', 'MIS'),
+('5645', 'Anik Mahmud', '', 'EEE'),
+('7893', 'Motiur Rahman', '', 'PH'),
+('8488', 'Sheikh Kaniz', '', 'MIS'),
+('8793', ' Sharif Rahman', '', 'PH');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mapping_t`
+--
+
+CREATE TABLE `mapping_t` (
+  `COID` int(4) NOT NULL,
+  `PLOID` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mapping_t`
+--
+
+INSERT INTO `mapping_t` (`COID`, `PLOID`) VALUES
+(1, 11),
+(2, 11),
+(3, 16),
+(4, 16),
+(5, 16),
+(6, 12),
+(7, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `plo_t`
+--
+
+CREATE TABLE `plo_t` (
+  `PLOID` int(4) NOT NULL,
+  `ProgramID` varchar(10) NOT NULL,
+  `PLONumber` varchar(15) NOT NULL,
+  `PLODomain` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `plo_t`
+--
+
+INSERT INTO `plo_t` (`PLOID`, `ProgramID`, `PLONumber`, `PLODomain`) VALUES
+(11, 'B.Sc_CSE', 'PLO4', 'Design'),
+(12, 'B.Sc_EEE', 'PLO1', 'Knowledge'),
+(13, 'BBA_ACN', 'PLO1', 'Knowledge'),
+(14, 'BBA_MIS', 'PLO3', 'Problem Analysis'),
+(15, 'BPharm ', 'PLO3', 'Problem Analysis'),
+(16, 'M.Sc_CSE', 'PLO5', 'Problem Solving'),
+(17, 'M.Sc_EEE', 'PLO2', 'Requirement Analysis'),
+(18, 'MBA_ACN', 'PLO2', 'Requirement Analysis'),
+(19, 'MPH', 'PLO4', 'Design');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prerequisite_t`
+--
+
+CREATE TABLE `prerequisite_t` (
+  `CourseID` varchar(7) NOT NULL,
+  `PrerequisiteCourseID` varchar(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Dumping data for table `prerequisite_t`
+--
+
+INSERT INTO `prerequisite_t` (`CourseID`, `PrerequisiteCourseID`) VALUES
+('ACE301', 'ACN101'),
+('CSE303', 'CSE203'),
+('EEE231', 'EEE131');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `program_t`
+--
+
+CREATE TABLE `program_t` (
+  `ProgramID` varchar(10) NOT NULL,
+  `ProgramName` varchar(20) NOT NULL,
+  `DepartmentID` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `program_t`
+--
+
+INSERT INTO `program_t` (`ProgramID`, `ProgramName`, `DepartmentID`) VALUES
+('B.Sc-CSE', 'Bachelor of Science ', 'CSE'),
+('B.Sc-EEE', 'Bachelor of Science ', 'EEE'),
+('BBA-ACN', 'Bachelor of Business', 'ACN'),
+('BBA-MIS', 'Bachelor of Business', 'MIS'),
+('BPharm', 'Bachelor of Pharmacy', 'Pharm'),
+('M.Sc-CSE', 'Master of Science in', 'CSE'),
+('M.Sc-EEE', 'Master of Science in', 'EEE'),
+('MBA-ACN', 'Master of Business A', 'ACN'),
+('MPH', 'Master of Public Hea', 'PH');
