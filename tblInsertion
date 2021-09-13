@@ -1,0 +1,5 @@
+INSERT INTO `assessment_t`(`AssessmentID`, `AssessmentName`, `TotalMarks`, `SectionID`, `COID`, `QuestionNUmber`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
+INSERT INTO `course_t`(`CourseID`, `CourseTitle`, `NumberOfCredit`, `ProgramID`, `MappedCourseID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
+INSERT INTO `co_t`(`COID`, `CourseID`, `CONumber`, `CODescription`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
+INSERT INTO `department_t`(`DepartmentID`, `DepartmentName`, `SchoolID`) VALUES ('[value-1]','[value-2]','[value-3]')
+INSERT INTO `evaluation_t`(`EvaluationID`, `AssessmentID`, `ObtainMarks`, `StudentID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
