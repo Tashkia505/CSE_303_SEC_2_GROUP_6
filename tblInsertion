@@ -13,7 +13,7 @@ INSERT INTO `assessment_t` (`AssessmentID`, `AssessmentName`, `TotalMarks`, `Sec
 (12, 'Final', '40', 'CSE501_1', 4, '4');
 
 
-INSERT INTO `course_t`(`CourseID`, `CourseTitle`, `NumberOfCredit`, `ProgramID`, `MappedCourseID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]')
+
 INSERT INTO `course_t` (`CourseID`, `CourseTitle`, `NumberOfCredit`, `ProgramID`, `MappedCourseID`) VALUES
 ('ACN101', 'Introduction to acco', '3', 'BBA-ACN', ''),
 ('ACN301', 'Intermediate Account', '3', 'BBA-ACN', ''),
@@ -44,15 +44,60 @@ INSERT INTO `co_t` (`COID`, `CourseID`, `CONumber`, `CODescription`) VALUES
 (6, 'EEE131', 'CO2', 'Describe'),
 (7, 'EEE131', 'CO3', 'Explain');
 
+INSERT INTO `department_t` (`DepartmentID`, `DepartmentName`, `SchoolID`) VALUES
+('ACN', 'Accounting', 'SBE'),
+('CSE', 'Computer Science and', 'SETS'),
+('EEE', 'Electrical and Elect', 'SETS'),
+('MIS', 'Management Informati', 'SBE'),
+('PH', 'Public Health', 'SPPH'),
+('Pharm', 'Pharmacy', 'SPPH');
 
-INSERT INTO `department_t`(`DepartmentID`, `DepartmentName`, `SchoolID`) VALUES ('[value-1]','[value-2]','[value-3]')
 
-INSERT INTO `evaluation_t`(`EvaluationID`, `AssessmentID`, `ObtainMarks`, `StudentID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-INSERT INTO `instructor_t`(`InstructorID`, `InstructorName`, `Email`, `DepartmentID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-INSERT INTO `mapping_t`(`COID`, `PLOID`) VALUES ('[value-1]','[value-2]')
+
+INSERT INTO `evaluation_t` (`EvaluationID`, `AssessmentID`, `ObtainMarks`, `StudentID`) VALUES
+(1, 1, 7, '1345678'),
+(2, 2, 20, '1345678'),
+(3, 3, 10, '1345678'),
+(4, 4, 33, '1345678'),
+(5, 1, 12, '1853478'),
+(6, 2, 25, '1853478'),
+(7, 3, 13, '1853478'),
+(8, 4, 35, '1853478'),
+(9, 9, 8, '1567893'),
+(10, 10, 18, '1567893'),
+(11, 11, 14, '1567893'),
+(12, 12, 30, '1567893');
+
+INSERT INTO `instructor_t` (`InstructorID`, `InstructorName`, `Email`, `DepartmentID`) VALUES
+('1545', 'Abu Sayed', '', 'CSE'),
+('4565', 'Noor Muhammad', '', 'ACN'),
+('4666', 'Sadita Ahmed', '', 'CSE'),
+('4755', 'Shahriar Kabir', '', 'ACN'),
+('4878', 'Tasnim Hassan', '', 'Pharm'),
+('5589', 'Muhammad hosain', '', 'MIS'),
+('5645', 'Anik Mahmud', '', 'EEE'),
+('7893', 'Motiur Rahman', '', 'PH'),
+('8488', 'Sheikh Kaniz', '', 'MIS'),
+('8793', ' Sharif Rahman', '', 'PH');
+
+INSERT INTO `mapping_t` (`COID`, `PLOID`) VALUES
+(1, 11),
+(2, 11),
+(3, 16),
+(4, 16),
+(5, 16),
+(6, 12),
+(7, 12);
+
 INSERT INTO `plo_t`(`PLOID`, `ProgramID`, `PLONumber`, `PLODomain`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')
-INSERT INTO `prerequisite_t`(`CourseID`, `PrerequisiteCourseID`) VALUES ('[value-1]','[value-2]')
-INSERT INTO `program_t`(`ProgramID`, `ProgramName`, `DepartmentID`) VALUES ('[value-1]','[value-2]','[value-3]')
-INSERT INTO `registrations_t`(`StudentID`, `SectionID`, `DateOfRegistration`) VALUES ('[value-1]','[value-2]','[value-3]')
-INSERT INTO `school_t`(`SchoolID`, `SchoolName`, `UniversityID`) VALUES ('[value-1]','[value-2]','[value-3]')
-INSERT INTO `section_t`(`SectionID`, `CourseID`, `SectionNumber`, `InstructorID`, `Semester`, `Year`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')
+INSERT INTO `plo_t` (`PLOID`, `ProgramID`, `PLONumber`, `PLODomain`) VALUES
+(11, 'B.Sc_CSE', 'PLO4', 'Design'),
+(12, 'B.Sc_EEE', 'PLO1', 'Knowledge'),
+(13, 'BBA_ACN', 'PLO1', 'Knowledge'),
+(14, 'BBA_MIS', 'PLO3', 'Problem Analysis'),
+(15, 'BPharm ', 'PLO3', 'Problem Analysis'),
+(16, 'M.Sc_CSE', 'PLO5', 'Problem Solving'),
+(17, 'M.Sc_EEE', 'PLO2', 'Requirement Analysis'),
+(18, 'MBA_ACN', 'PLO2', 'Requirement Analysis'),
+(19, 'MPH', 'PLO4', 'Design');
+
