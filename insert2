@@ -1,0 +1,81 @@
+INSERT INTO prerequisite_t (CourseID, PrerequisiteCourseID) VALUES
+('ACE301', 'ACN101'),
+('CSE303', 'CSE203'),
+('EEE231', 'EEE131');
+
+
+INSERT INTO program_t (ProgramID, ProgramName, DepartmentID) VALUES
+('B.Sc-CSE', 'Bachelor of Science ', 'CSE'),
+('B.Sc-EEE', 'Bachelor of Science ', 'EEE'),
+('BBA-ACN', 'Bachelor of Business', 'ACN'),
+('BBA-MIS', 'Bachelor of Business', 'MIS'),
+('BPharm', 'Bachelor of Pharmacy', 'Pharm'),
+('M.Sc-CSE', 'Master of Science in', 'CSE'),
+('M.Sc-EEE', 'Master of Science in', 'EEE'),
+('MBA-ACN', 'Master of Business A', 'ACN'),
+('MPH', 'Master of Public Hea', 'PH');
+
+
+INSERT INTO registrations_t (StudentID, SectionID, DateOfRegistration) VALUES
+('1345678', 'CSE203_2', '2020-05-04 00:00:00'),
+('1345678', 'CSE303_1', '2020-01-26 00:00:00'),
+('1567893', 'CSE501_1', '2021-06-02 00:00:00'),
+('1659636', 'EEE131_1', '2021-06-02 00:00:00'),
+('1659636', 'EEE231_1', '2021-01-26 00:00:00'),
+('1853478', 'CSE303_1', '2020-06-02 00:00:00');
+
+
+
+INSERT INTO school_t (SchoolID, SchoolName, UniversityID) VALUES
+('SBE', 'School of Business &', 'IUB'),
+('SETS', 'School of Engineerin', 'NSU'),
+('SPPH', 'School of Pharmacy A', 'AIUB');
+
+
+INSERT INTO section_t (SectionID, CourseID, SectionNumber, InstructorID, Semester, Year) VALUES
+('ACN101_1', 'ACN101', '1', '4565', 'Spring', '2020'),
+('ACN101_2', 'ACN101', '2', '4755', 'Spring', '2020'),
+('ACN301_1', 'ACN301', '1', '4565', 'Summer', '2020'),
+('ACN301_2', 'ACN301', '2', '4755', 'Summer', '2021'),
+('ACN513_1', 'ACN513', '1', '4565', 'Autumn', '2020'),
+('ACN520_1', 'ACN520', '1', '4755', 'Summer', '2021'),
+('CSE203_1', 'CSE303', '2', '1545', 'Summer', '2020'),
+('CSE203_2', 'CSE203', '2', '4666', 'Spring', '2021'),
+('CSE303_1', 'CSE303', '1', '4666', 'Spring', '2020'),
+('CSE303_2', 'CSE303', '2', '1545', 'Summer', '2020'),
+('CSE501_1', 'CSE501', '1', '1545', 'Spring', '2021'),
+('CSE503_1', 'CSE503', '1', '1545', 'Spring', '2020'),
+('EEE131_1', 'EEE131', '1', '5645', 'Spring', '2020'),
+('EEE231_1', 'EEE231', '1', '5645', 'Autumn', '2021'),
+('EEE501_1', 'EEE501', '1', '5645', 'Spring', '2021'),
+('EEE501_2', 'EEE501', '1', '5645', 'Summer', '2021'),
+('EEE502_1', 'EEE502', '1', '5645', 'Summer', '2021'),
+('HSC530_1', 'HSC530', '1', '8793', 'Spring', '2021'),
+('HSC531_1', 'HSC531', '1', '8793', 'Spring', '2020'),
+('MIS341_1', 'MIS341', '1', '5589', 'Summer', '2020'),
+('MIS341_2', 'MIS341', '2', '8488', 'Spring', '2021'),
+('MIS442_1', 'MIS442', '1', '5589', 'Spring', '2021'),
+('MIS442_2', 'MIS442', '2', '8488', 'Summer', '2021'),
+('PHA101_1', 'PHA101', '1', '4878', 'Spring', '2021'),
+('PHA203_1', 'PHA203', '1', '4878', 'Autumn', '2021');
+
+
+
+INSERT INTO student_t (StudentID, FirstName, SecondName, DateOfBirth, Gender, EmailS, NID, ProgramID, EnrollmentDate) VALUES
+('1345678', 'Munna', 'Kabir', '1992-05-25 00:00:00', 'Male', '', '', 'B.Sc_CSE', '0000-00-00 00:00:00'),
+('1456789', 'Shariar', 'Rahman', '2000-02-20 00:00:00', 'Male', '', '', 'MPH', '0000-00-00 00:00:00'),
+('1567893', 'Lamisa', 'Khan', '1995-07-10 00:00:00', 'Female', '', '', 'M.Sc_CSE', '0000-00-00 00:00:00'),
+('1659636', 'Ferdous', 'Shahriar', '1997-10-05 00:00:00', 'Male', '', '', 'B.Sc_EEE', '0000-00-00 00:00:00'),
+('1765349', 'Ruby', 'Rashid', '1999-02-04 00:00:00', 'Female', '', '', 'BBA_MIS', '0000-00-00 00:00:00'),
+('1787536', 'Sumaiya', 'Mustarin', '1998-05-22 00:00:00', 'Female', '', '', 'M.Sc_EEE', '0000-00-00 00:00:00'),
+('1789467', 'Shanta', 'Akhtar', '1995-10-30 00:00:00', 'Female', '', '', 'MBA_ACN', '0000-00-00 00:00:00'),
+('1853478', 'Tahsin', 'Shahrin', '1998-04-30 00:00:00', 'Female', '', '', 'B.Sc_CSE', '0000-00-00 00:00:00'),
+('1887468', 'Fahad', 'Islam', '1997-05-23 00:00:00', 'Male', '', '', 'BBA_ACN', '0000-00-00 00:00:00'),
+('1890654', 'Anika', 'Rahman', '1996-12-31 00:00:00', 'Female', '', '', 'BPharm', '0000-00-00 00:00:00');
+
+
+
+INSERT INTO university_t (UniversityID, UniversityName) VALUES
+('AIUB', 'American International University Bangla'),
+('IUB', 'Independent University Bangladesh'),
+('NSU', 'North South University');
